@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="hotpink">#ff3cbb</color>
     <color name="pink">#FFE4E1</color>
     <color name="forest">#228b22</color>
     <color name="purple_200">#FFBB86FC</color>

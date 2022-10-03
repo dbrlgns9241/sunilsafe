@@ -45,7 +45,9 @@ class CrawlingActivity : AppCompatActivity() {
     fun doTask(url : String) {
         var documentTitle : String = ""
         var itemList : ArrayList<CrawlingItem> = arrayListOf()
-
+        
+        
+        //single.fromcallagble 실행안되는 오류 발생
         Single.fromCallable {
             try {
                 // 사이트에 접속해서 HTML 문서 가져오기
