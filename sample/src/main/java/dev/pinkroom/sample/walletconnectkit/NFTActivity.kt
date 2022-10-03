@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import dev.pinkroom.walletconnectkit.WalletConnectKit
 import dev.pinkroom.walletconnectkit.WalletConnectKitConfig
@@ -55,10 +56,14 @@ class NFTActivity : AppCompatActivity() {
 
     private fun onConnected(address: String) {
         addressTxt = getString(R.string.connected_with, address)
+        wc_button.visibility = View.GONE
+        nft_check_button.visibility = View.VISIBLE
         invalidateOptionsMenu()
     }
 
     private fun onDisconnected() {
+        wc_button.visibility = View.VISIBLE
+        nft_check_button.visibility = View.GONE
         invalidateOptionsMenu()
     }
 
