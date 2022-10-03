@@ -1,7 +1,7 @@
 ## how to use
 
-sample/src/main/java/MainActivity
+sunilweb to app
 
-"var adressTxt" is connected ethereum wallet address
+Metamask wallet Connect
 
-good luck
+NFT display
