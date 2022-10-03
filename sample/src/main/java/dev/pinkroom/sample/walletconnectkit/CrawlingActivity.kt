@@ -35,12 +35,11 @@ class CrawlingActivity : AppCompatActivity() {
 
         // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
         var tmp = intent.getStringExtra("addTxt").toString()
-        val etherCode = tmp.substring(16)
+        var etherCode = tmp.substring(16)
         Toast.makeText(this@CrawlingActivity,"https://opensea.io/" + etherCode,Toast.LENGTH_SHORT).show()
 
         //크롤링 함수 실행
         doTask("https://opensea.io/" + etherCode)
-
     }
     // 크롤링 하기
     fun doTask(url : String) {
@@ -53,7 +52,6 @@ class CrawlingActivity : AppCompatActivity() {
                 var connection = Jsoup.connect(url)
                 connection.userAgent("Chrome/105.0")
                 var doc = connection.get()
-
 //                Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
 
