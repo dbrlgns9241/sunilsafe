@@ -31,8 +31,8 @@ class CrawlingActivity : AppCompatActivity() {
             Toast.makeText(this@CrawlingActivity,"https://opensea.io/" + etherCode,Toast.LENGTH_SHORT).show()
 
             //크롤링 함수 실행
-//            doTask("https://opensea.io/" + etherCode)
-            doTask("https://opensea.io/0x971c804Ca0c034553Ef0D31a55D8381488317149")
+            doTask("https://opensea.io/" + etherCode)
+
         }
 //        listView.layoutManager = LinearLayoutManager(this)
 //
