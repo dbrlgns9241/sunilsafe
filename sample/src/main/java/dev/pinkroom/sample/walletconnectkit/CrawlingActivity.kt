@@ -61,7 +61,7 @@ class CrawlingActivity : AppCompatActivity() {
                 var doc = connection.get()
                 //Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
-                val elements : Elements = doc.select("div.sc-ef631c69-0 span img")
+                val elements : Elements = doc.select("div.sc-45b283d7-0 div div span img")
 
                 //Log.d("Tssssss", elements.toString())
                 // (여러개의) elements 처리
