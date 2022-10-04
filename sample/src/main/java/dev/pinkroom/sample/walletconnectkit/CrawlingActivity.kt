@@ -21,29 +21,29 @@ class CrawlingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_crawling)
 
         // 크롤링 시작
-        btnStart.setOnClickListener {
-            // 리사이클러 뷰 매니저 설정
-            listView.layoutManager = LinearLayoutManager(this)
-
-            // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
-            var tmp = intent.getStringExtra("addTxt").toString()
-            val etherCode = tmp.substring(16)
-            Toast.makeText(this@CrawlingActivity,"https://opensea.io/" + etherCode,Toast.LENGTH_SHORT).show()
-
-            //크롤링 함수 실행
-            doTask("https://opensea.io/" + etherCode)
-
-        }
-//        listView.layoutManager = LinearLayoutManager(this)
+//        btnStart.setOnClickListener {
+//            // 리사이클러 뷰 매니저 설정
+//            listView.layoutManager = LinearLayoutManager(this)
 //
-//        // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
-//        var tmp = intent.getStringExtra("addTxt").toString()
-//        val etherCode = tmp.substring(16)
-//        Toast.makeText(this@CrawlingActivity, "https://opensea.io/" + etherCode, Toast.LENGTH_SHORT)
-//            .show()
+//            // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
+//            var tmp = intent.getStringExtra("addTxt").toString()
+//            val etherCode = tmp.substring(16)
+//            Toast.makeText(this@CrawlingActivity,"https://opensea.io/" + etherCode,Toast.LENGTH_SHORT).show()
 //
-//        //크롤링 함수 실행
-//        doTask("https://opensea.io/" + etherCode)
+//            //크롤링 함수 실행
+//            doTask("https://opensea.io/" + etherCode)
+//
+//        }
+        listView.layoutManager = LinearLayoutManager(this)
+
+        // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
+        var tmp = intent.getStringExtra("addTxt").toString()
+        val etherCode = tmp.substring(16)
+        Toast.makeText(this@CrawlingActivity, "https://opensea.io/" + etherCode, Toast.LENGTH_SHORT)
+            .show()
+
+        //크롤링 함수 실행
+        doTask("https://opensea.io/" + etherCode)
     }
 
     // 크롤링 하기
@@ -61,14 +61,7 @@ class CrawlingActivity : AppCompatActivity() {
                 var doc = connection.get()
                 //Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
-                val elements : Elements = doc.select("div.sc-cc7de838-0 span img")
-
-                /*
-                * 여러번 해봤는데 elements 에서 select 기능이 안되는듯
-                * 전체 소스코드는 잘 받아오는데 맨처음 parsing이 안되서
-                * 그다음 부분으로 넘어가서 리스트를 받지를 못함
-                * doc.select 부분을 손봐야 할 것 같음
-                * */
+                val elements : Elements = doc.select("div.sc-ef631c69-0 span img")
 
                 //Log.d("Tssssss", elements.toString())
                 // (여러개의) elements 처리
