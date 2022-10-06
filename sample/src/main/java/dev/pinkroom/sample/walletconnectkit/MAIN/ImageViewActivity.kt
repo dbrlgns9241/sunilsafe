@@ -1,4 +1,4 @@
-package dev.pinkroom.sample.walletconnectkit
+package dev.pinkroom.sample.walletconnectkit.MAIN
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.widget.ImageView
 import com.bumptech.glide.Glide
-import kotlinx.android.synthetic.main.activity_imageview.*
+import dev.pinkroom.sample.walletconnectkit.R
 
 class ImageViewActivity : AppCompatActivity(){
     lateinit var data : String

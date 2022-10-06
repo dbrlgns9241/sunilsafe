@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CrawlingActivity"
+    tools:context=".NFT.CrawlingActivity"
     android:orientation="vertical">
 <!--    <Button-->
 <!--        android:id="@+id/btnStart"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:text="보유한 NFT List"/>-->
+    <include
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <ScrollView
         android:id="@+id/scrollView"

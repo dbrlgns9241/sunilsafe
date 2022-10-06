@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalletConnectKit">
         <activity
-            android:name=".MainActivity"
+            android:name=".MAIN.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
@@ -23,21 +23,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NFTActivity"
+            android:name=".NFT.NFTActivity"
             android:exported="true"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".MAIN.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass"/>
         <activity
-            android:name=".CrawlingActivity"
+            android:name=".NFT.CrawlingActivity"
             android:exported="true"
-            android:parentActivityName=".NFTActivity"
+            android:parentActivityName=".NFT.NFTActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass" />
         <activity
-            android:name=".ImageViewActivity"
+            android:name=".MAIN.ImageViewActivity"
             android:exported="true"
-            android:parentActivityName=".CrawlingActivity"
+            android:parentActivityName=".NFT.CrawlingActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass" />
     </application>

@@ -1,11 +1,11 @@
-package dev.pinkroom.sample.walletconnectkit
+package dev.pinkroom.sample.walletconnectkit.NFT
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import dev.pinkroom.sample.walletconnectkit.R
 import dev.pinkroom.walletconnectkit.WalletConnectKit
 import dev.pinkroom.walletconnectkit.WalletConnectKitConfig
 import kotlinx.android.synthetic.main.activity_nft.*
@@ -31,6 +31,11 @@ class NFTActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nft)
 
+        val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
+        setSupportActionBar(toolbar) // 툴바 적용
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
+        getSupportActionBar()?.setTitle("")
+
         wc_button.start(walletConnectKit, ::onConnected, ::onDisconnected)
         nft_check_button.setOnClickListener {
             val addTxt = addressTxt
@@ -38,35 +43,26 @@ class NFTActivity : AppCompatActivity() {
             intent.putExtra("addTxt", addTxt)
             startActivity(intent)
         }
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        walletConnectKit.address?.let {
-            menuInflater.inflate(R.menu.toolbar_menu, menu)
+        logout_button.setOnClickListener{
+            onDisconnectClicked()
         }
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.disconnectView -> onDisconnectClicked()
-        }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun onConnected(address: String) {
         addressTxt = getString(R.string.connected_with, address)
         wc_button.visibility = View.GONE
         nft_check_button.visibility = View.VISIBLE
+        logout_button.visibility = View.VISIBLE
         invalidateOptionsMenu()
     }
 
     private fun onDisconnected() {
         wc_button.visibility = View.VISIBLE
         nft_check_button.visibility = View.GONE
+        logout_button.visibility = View.GONE
         invalidateOptionsMenu()
     }
-
 
     private fun onDisconnectClicked() {
         walletConnectKit.removeSession()

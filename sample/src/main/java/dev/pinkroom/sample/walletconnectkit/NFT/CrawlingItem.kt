@@ -1,6 +1,4 @@
-package dev.pinkroom.sample.walletconnectkit
-
-import java.io.Serializable
+package dev.pinkroom.sample.walletconnectkit.NFT
 
 data class CrawlingItem(
     val title : String,
