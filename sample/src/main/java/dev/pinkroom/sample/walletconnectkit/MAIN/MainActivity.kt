@@ -1,19 +1,20 @@
 package dev.pinkroom.sample.walletconnectkit.MAIN
 
+import android.R
 import android.content.Intent
-import androidx.appcompat.widget.Toolbar
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
+import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.EnterpriseFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.HomeFragment
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
-import dev.pinkroom.sample.walletconnectkit.R
-
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -22,21 +23,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(dev.pinkroom.sample.walletconnectkit.R.layout.activity_main)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
+        val toolbar: Toolbar = findViewById(dev.pinkroom.sample.walletconnectkit.R.id.toolbar) // toolBar를 통해 App Bar 생성
         setSupportActionBar(toolbar) // 툴바 적용
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true) // 드로어를 꺼낼 홈 버튼 활성화
-        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_baseline_dehaze_24) // 홈버튼 이미지 변경
+        supportActionBar?.setHomeAsUpIndicator(dev.pinkroom.sample.walletconnectkit.R.drawable.ic_baseline_dehaze_24) // 홈버튼 이미지 변경
         supportActionBar?.setDisplayShowTitleEnabled(false) // 툴바에 타이틀 안보이게
 
         // 네비게이션 드로어 생성
-        drawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout = findViewById(dev.pinkroom.sample.walletconnectkit.R.id.drawer_layout)
 
         // 네비게이션 드로어 내에있는 화면의 이벤트를 처리하기 위해 생성
-        navigationView = findViewById(R.id.nv_drawer)
+        navigationView = findViewById(dev.pinkroom.sample.walletconnectkit.R.id.nv_drawer)
         navigationView.setNavigationItemSelectedListener(this) //navigation 리스너
+
+        // 초기 프래그먼트 셋팅
+        val fragment = HomeFragment()
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.add(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
+        fragmentTransaction.commit()
 
         setExpandableList()
     }
@@ -77,29 +84,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         el_menu.setOnGroupClickListener { parent, v, groupPosition, id ->
             /* todo : parent 클릭 이벤트 설정 */
-            when(groupPosition){
-                5 ->{
-                    val intent = Intent(this, NFTActivity::class.java)
-                    startActivity(intent)
-                }
-            }
             false
         }
         el_menu.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
             /* todo : child 클릭 이벤트 설정 */
-            when(groupPosition){
+            when (groupPosition) {
+                //로그인
                 0 -> {}
-                1 -> when(childPosition) {
-                    0 -> Toast.makeText(this, "기업소개", Toast.LENGTH_SHORT).show()
-                    1 -> Toast.makeText(this, "브랜드 소개", Toast.LENGTH_SHORT).show()
-                    2 -> Toast.makeText(this, "그린 경영", Toast.LENGTH_SHORT).show()
-                    3 -> Toast.makeText(this, "인재채용", Toast.LENGTH_SHORT).show()
+                //회사소개
+                1 -> when (childPosition ){
+                    //기업소개
+                    0 -> {
+                        val fragment = EnterpriseFragment()
+                        val fragmentTransaction = supportFragmentManager.beginTransaction()
+                        fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
+                        fragmentTransaction.commit()
+                    }
+                    1 -> {}
+                    2 -> {}
+                    3 -> {}
                 }
                 2 -> {}
                 3 -> {}
                 4 -> {}
                 5 -> {}
-                6 -> when(childPosition){
+                //NFT 갤러리
+                6 -> when (childPosition) {
+                    //나의 NFT 갤러리 가기
                     0 -> {
                         val intent = Intent(this, NFTActivity::class.java)
                         startActivity(intent)
@@ -108,6 +119,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             false
         }
+
     }
 
 }
+

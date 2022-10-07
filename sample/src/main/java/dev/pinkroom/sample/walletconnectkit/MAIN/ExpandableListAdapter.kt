@@ -12,23 +12,16 @@ import kotlinx.android.synthetic.main.menu_parent.view.*
 class ExpandableListAdapter(
     private val context: Context,
     private val parents: MutableList<String>,
-    private val childList: MutableList<MutableList<String>>
+    private val childList: MutableList<MutableList<String>>,
 ) : BaseExpandableListAdapter() {
 
     override fun getGroupCount() = parents.size
-
     override fun getChildrenCount(parent: Int) = childList[parent].size
-
     override fun getGroup(parent: Int) = parents[parent]
-
     override fun getChild(parent: Int, child: Int): String = childList[parent][child]
-
     override fun getGroupId(parent: Int) = parent.toLong()
-
     override fun getChildId(parent: Int, child: Int) = child.toLong()
-
     override fun hasStableIds() = false
-
     override fun isChildSelectable(groupPosition: Int, childPosition: Int) = true
 
     /* 부모 계층 레이아웃 설정 */
@@ -62,22 +55,5 @@ class ExpandableListAdapter(
         return childView
     }
 
-//    /* drawer 아이콘 설정 */
-//    private fun setIcon(parentPosition: Int, parentView: View) {
-//        when (parentPosition) {
-//            0 -> parentView.iv_img.setImageResource(R.drawable.ic_person)
-//            1 -> parentView.iv_img.setImageResource(R.drawable.ic_assignment)
-//            2 -> parentView.iv_img.setImageResource(R.drawable.ic_settings)
-//        }
-//    }
-//
-//    /* 닫힘, 열림 표시해주는 화살표 설정 */
-//    private fun setArrow(parentPosition: Int, parentView: View, isExpanded: Boolean) {
-//
-//        /* 0번째 부모는 자식이 없으므로 화살표 설정해주지 않음 */
-//        if (parentPosition != 0) {
-//            if (isExpanded) parentView.iv_arrow_drop.setImageResource(R.drawable.ic_arrow_drop_up)
-//            else parentView.iv_arrow_drop.setImageResource(R.drawable.ic_arrow_drop_down)
-//        }
-//    }
+
 }

@@ -6,12 +6,16 @@
         <entry key="../../../../../../layout/custom_preview.xml" value="0.27037037037037037" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_crawling.xml" value="0.22" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_imageview.xml" value="0.26222826086956524" />
-        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_nft.xml" value="0.25" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/appbar.xml" value="0.22" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/crawling_item.xml" value="0.26222826086956524" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_enterprise.xml" value="0.2042417199302731" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_home.xml" value="0.2042417199302731" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/header.xml" value="0.22" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/menu_child.xml" value="0.25" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/menu_childchild.xml" value="0.23125" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/menu_grandchild.xml" value="0.21789617486338797" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/menu_parent.xml" value="0.18" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/menu/menu_list.xml" value="0.25" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/menu/menu_list_child.xml" value="0.23125" />
