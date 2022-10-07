@@ -17,11 +17,4 @@ class OnwayFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_onway, container, false)
     }
 
-    fun newInstant() : OnwayFragment
-    {
-        val args = Bundle()
-        val frag = OnwayFragment()
-        frag.arguments = args
-        return frag
-    }
 }

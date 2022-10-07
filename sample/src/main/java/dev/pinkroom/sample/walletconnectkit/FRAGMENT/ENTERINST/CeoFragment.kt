@@ -19,11 +19,4 @@ class CeoFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_ceo, container, false)
     }
 
-    fun newInstant() : CeoFragment
-    {
-        val args = Bundle()
-        val frag = CeoFragment()
-        frag.arguments = args
-        return frag
-    }
 }

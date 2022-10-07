@@ -19,12 +19,5 @@ class VisionFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_vision, container, false)
     }
 
-    fun newInstant() : VisionFragment
-    {
-        val args = Bundle()
-        val frag = VisionFragment()
-        frag.arguments = args
-        return frag
-    }
 
 }

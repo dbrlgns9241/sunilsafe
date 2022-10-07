@@ -19,12 +19,4 @@ class YearFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_year, container, false)
     }
 
-    fun newInstant() : YearFragment
-    {
-        val args = Bundle()
-        val frag = YearFragment()
-        frag.arguments = args
-        return frag
-    }
-
 }

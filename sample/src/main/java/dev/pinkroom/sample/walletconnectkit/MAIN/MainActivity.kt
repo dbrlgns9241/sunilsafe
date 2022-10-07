@@ -66,8 +66,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     /* ExpandableListView 설정 */
     private fun setExpandableList() {
-        val parentList = mutableListOf("로그인","회사소개", "제품소개", "테크놀러지","홍보센터","고객지원","NFT 갤러리")
+        val parentList = mutableListOf("홈으로","로그인","회사소개", "제품소개", "테크놀러지","홍보센터","고객지원","NFT 갤러리")
         val childList = mutableListOf(
+            mutableListOf(),
             mutableListOf("회원가입","로그인", "마이페이지", "장바구니"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
             mutableListOf("나만의 금고찾기", "가정용 인테리어 금고","사무용 내화 금고","내화 방도 겸용 금고","특수금고"),
@@ -87,10 +88,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         el_menu.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
             /* todo : child 클릭 이벤트 설정 */
             when (groupPosition) {
+                //홈으로
+                0 -> {
+                    val fragment = HomeFragment()
+                    val fragmentTransaction = supportFragmentManager.beginTransaction()
+                    fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
+                    fragmentTransaction.commit()
+                }
                 //로그인
-                0 -> {}
+                1 -> {}
                 //회사소개
-                1 -> when (childPosition ){
+                2 -> when (childPosition ){
                     //기업소개
                     0 -> {
                         val fragment = EnterpriseFragment()
@@ -102,12 +110,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     2 -> {}
                     3 -> {}
                 }
-                2 -> {}
                 3 -> {}
                 4 -> {}
                 5 -> {}
+                6 -> {}
                 //NFT 갤러리
-                6 -> when (childPosition) {
+                7 -> when (childPosition) {
                     //나의 NFT 갤러리 가기
                     0 -> {
                         val intent = Intent(this, NFTActivity::class.java)
