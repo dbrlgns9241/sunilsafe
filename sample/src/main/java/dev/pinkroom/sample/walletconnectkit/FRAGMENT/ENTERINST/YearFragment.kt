@@ -1,4 +1,4 @@
-package dev.pinkroom.sample.walletconnectkit.FRAGMENT
+package dev.pinkroom.sample.walletconnectkit.FRAGMENT.ENTERINST
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import dev.pinkroom.sample.walletconnectkit.R
 
-class HomeFragment : Fragment() {
+
+class YearFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,7 +16,15 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_year, container, false)
+    }
+
+    fun newInstant() : YearFragment
+    {
+        val args = Bundle()
+        val frag = YearFragment()
+        frag.arguments = args
+        return frag
     }
 
 }

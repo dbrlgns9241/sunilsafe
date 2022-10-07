@@ -1,10 +1,8 @@
 package dev.pinkroom.sample.walletconnectkit.MAIN
 
-import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
