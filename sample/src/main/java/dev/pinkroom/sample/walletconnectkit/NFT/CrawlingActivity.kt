@@ -16,6 +16,9 @@ import org.jsoup.select.Elements
 import java.lang.Exception
 
 class CrawlingActivity : AppCompatActivity() {
+
+    var itemList: ArrayList<CrawlingItem> = arrayListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_crawling)
@@ -49,13 +52,14 @@ class CrawlingActivity : AppCompatActivity() {
 
         //크롤링 함수 실행
         doTask("https://opensea.io/" + etherCode)
+
+
     }
 
     // 크롤링 하기
     fun doTask(url: String) {
         var documentTitle: String = ""
         var itemList: ArrayList<CrawlingItem> = arrayListOf()
-
 
         //single.fromcallagble 실행안되는 오류 발생
         Single.fromCallable {
