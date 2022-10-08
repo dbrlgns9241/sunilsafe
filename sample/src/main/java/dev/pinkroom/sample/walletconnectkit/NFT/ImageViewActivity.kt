@@ -29,19 +29,11 @@ class ImageViewActivity : AppCompatActivity(){
 
         // 이미지 클릭시 버튼이 사라졌다 생겼다
         imageView.setOnClickListener{
-            if(back_btn.visibility == View.GONE) {
-                back_btn.visibility = View.VISIBLE
+            if(cloud_btn.visibility == View.GONE) {
                 cloud_btn.visibility = View.VISIBLE
             }else{
-                back_btn.visibility = View.GONE
                 cloud_btn.visibility = View.GONE
             }
-        }
-
-        //뒤로가기 버튼
-        back_btn.setOnClickListener{
-            val intent = Intent(this, CrawlingActivity::class.java)
-            startActivity(intent)
         }
 
         //클라우드로 전송 버튼
