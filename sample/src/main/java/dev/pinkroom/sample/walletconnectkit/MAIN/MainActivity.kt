@@ -10,6 +10,8 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.EnterpriseFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.HomeFragment
+import dev.pinkroom.sample.walletconnectkit.LOGIN.JoinActivity
+import dev.pinkroom.sample.walletconnectkit.LOGIN.LoginActivity
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -83,20 +85,39 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         el_menu.setOnGroupClickListener { parent, v, groupPosition, id ->
             /* todo : parent 클릭 이벤트 설정 */
+            when (groupPosition) {
+                //홈으로
+                0 -> {
+                    val fragment = HomeFragment()
+                    val fragmentTransaction = supportFragmentManager.beginTransaction()
+                    fragmentTransaction.replace(
+                        dev.pinkroom.sample.walletconnectkit.R.id.frame_layout,
+                        fragment,
+                        "Home"
+                    )
+                    fragmentTransaction.commit()
+                }
+            }
             false
         }
         el_menu.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
             /* todo : child 클릭 이벤트 설정 */
             when (groupPosition) {
                 //홈으로
-                0 -> {
-                    val fragment = HomeFragment()
-                    val fragmentTransaction = supportFragmentManager.beginTransaction()
-                    fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
-                    fragmentTransaction.commit()
-                }
+                0 -> {}
                 //로그인
-                1 -> {}
+                1 -> when(childPosition){
+                    //회원가입
+                    0 -> {
+                        val intent = Intent(this, JoinActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //로그인
+                    1 -> {
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
                 //회사소개
                 2 -> when (childPosition ){
                     //기업소개
