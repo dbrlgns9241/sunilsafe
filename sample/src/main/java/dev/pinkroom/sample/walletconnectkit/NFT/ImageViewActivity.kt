@@ -1,12 +1,16 @@
 package dev.pinkroom.sample.walletconnectkit.NFT
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
 import com.bumptech.glide.Glide
+import dev.pinkroom.sample.walletconnectkit.MAIN.MainActivity
 import dev.pinkroom.sample.walletconnectkit.R
+import kotlinx.android.synthetic.main.activity_imageview.*
 
 class ImageViewActivity : AppCompatActivity(){
     lateinit var data : String
@@ -23,6 +27,27 @@ class ImageViewActivity : AppCompatActivity(){
 
         Glide.with(this).load(data).into(imageView)
 
+        // 이미지 클릭시 버튼이 사라졌다 생겼다
+        imageView.setOnClickListener{
+            if(back_btn.visibility == View.GONE) {
+                back_btn.visibility = View.VISIBLE
+                cloud_btn.visibility = View.VISIBLE
+            }else{
+                back_btn.visibility = View.GONE
+                cloud_btn.visibility = View.GONE
+            }
+        }
+
+        //뒤로가기 버튼
+        back_btn.setOnClickListener{
+            val intent = Intent(this, CrawlingActivity::class.java)
+            startActivity(intent)
+        }
+
+        //클라우드로 전송 버튼
+        cloud_btn.setOnClickListener{
+            //클라우드로 전송하는 기능 구현하면 됌
+        }
 
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
