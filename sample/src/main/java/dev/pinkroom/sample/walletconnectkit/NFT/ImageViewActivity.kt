@@ -1,30 +1,39 @@
 package dev.pinkroom.sample.walletconnectkit.NFT
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+
+import android.app.DownloadManager
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.net.toUri
 import com.bumptech.glide.Glide
-import dev.pinkroom.sample.walletconnectkit.MAIN.MainActivity
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import dev.pinkroom.sample.walletconnectkit.R
 import kotlinx.android.synthetic.main.activity_imageview.*
+import java.io.File
+import java.nio.file.Files.createFile
+
 
 class ImageViewActivity : AppCompatActivity(){
     lateinit var data : String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_imageview)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
         val imageView = findViewById<ImageView>(R.id.img_profile)
         Log.d("Taaaa", "여기까진 됨")
 
+        //현재 선택한 이미지 url
         data = intent.getStringExtra("data").toString()
-
+        
+        //img url 로 imageview에 보여주기
         Glide.with(this).load(data).into(imageView)
 
         // 이미지 클릭시 버튼이 사라졌다 생겼다
@@ -38,10 +47,24 @@ class ImageViewActivity : AppCompatActivity(){
 
         //클라우드로 전송 버튼
         cloud_btn.setOnClickListener{
-            //클라우드로 전송하는 기능 구현하면 됌
+            val database = Firebase.database
+            val myRef = database.getReference("message")
+            myRef.setValue(data)
+            Toast.makeText(this, "클라우드로 전송완료", Toast.LENGTH_SHORT).show()
         }
 
+
     }
+
+    private fun downloadImage(url:String) {
+        val file = File(getExternalFilesDir(null), "dev_submit.mp4")
+
+        val request = DownloadManager.Request(url.toUri())
+            .setTitle("Downloading a video")
+            .setDescription("Downloading Dev Summit")
+            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item?.itemId){
             android.R.id.home -> {

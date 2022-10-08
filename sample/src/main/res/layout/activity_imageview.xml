@@ -10,9 +10,9 @@
         android:id="@+id/cloud_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:text="내 클라우드로 전송"
         app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/pink"
         android:visibility="gone"
         tools:ignore="MissingConstraints" />
 
