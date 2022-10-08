@@ -41,12 +41,12 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email.text.toString(), pwd.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-
+                        Toast.makeText(this, "로그인완료! 환영합니다", Toast.LENGTH_LONG).show()
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
 
                     } else {
-                        Toast.makeText(this, "실패", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "로그인 실패, 다시한번 확인해주세요", Toast.LENGTH_LONG).show()
                     }
                 }
         }
