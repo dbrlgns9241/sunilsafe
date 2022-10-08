@@ -49,20 +49,11 @@ class ImageViewActivity : AppCompatActivity(){
         cloud_btn.setOnClickListener{
             val database = Firebase.database
             val myRef = database.getReference("message")
+            //realtime db에 이미지url 전송
             myRef.setValue(data)
             Toast.makeText(this, "클라우드로 전송완료", Toast.LENGTH_SHORT).show()
         }
 
-
-    }
-
-    private fun downloadImage(url:String) {
-        val file = File(getExternalFilesDir(null), "dev_submit.mp4")
-
-        val request = DownloadManager.Request(url.toUri())
-            .setTitle("Downloading a video")
-            .setDescription("Downloading Dev Summit")
-            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
