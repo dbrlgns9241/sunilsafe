@@ -1,4 +1,4 @@
-package dev.pinkroom.sample.walletconnectkit.MAIN
+package dev.pinkroom.sample.walletconnectkit.NFT
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

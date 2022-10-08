@@ -54,7 +54,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass" />
         <activity
-            android:name=".MAIN.ImageViewActivity"
+            android:name=".NFT.ImageViewActivity"
             android:exported="true"
             android:parentActivityName=".NFT.CrawlingActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"

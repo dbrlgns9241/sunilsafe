@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import dev.pinkroom.sample.walletconnectkit.MAIN.ImageViewActivity
 import dev.pinkroom.sample.walletconnectkit.R
 import kotlinx.android.synthetic.main.crawling_item.view.*
 
