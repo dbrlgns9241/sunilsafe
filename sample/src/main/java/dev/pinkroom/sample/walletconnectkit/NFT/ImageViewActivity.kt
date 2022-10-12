@@ -21,6 +21,7 @@ import java.nio.file.Files.createFile
 
 class ImageViewActivity : AppCompatActivity(){
     lateinit var data : String
+    lateinit var data2 : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +33,9 @@ class ImageViewActivity : AppCompatActivity(){
 
         //현재 선택한 이미지 url
         data = intent.getStringExtra("data").toString()
+
+        //현재 이미지의 이름 string
+        data2 = intent.getStringExtra("data2").toString()
         
         //img url 로 imageview에 보여주기
         Glide.with(this).load(data).into(imageView)
@@ -48,9 +52,11 @@ class ImageViewActivity : AppCompatActivity(){
         //클라우드로 전송 버튼
         cloud_btn.setOnClickListener{
             val database = Firebase.database
-            val myRef = database.getReference("message")
-            //realtime db에 이미지url 전송
-            myRef.setValue(data)
+            val nameRef = database.getReference("name")
+            val urlRef = database.getReference("url")
+            //realtime db에 이름, 이미지url 전송
+            nameRef.setValue(data2)
+            urlRef.setValue(data)
             Toast.makeText(this, "클라우드로 전송완료", Toast.LENGTH_SHORT).show()
         }
 

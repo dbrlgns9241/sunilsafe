@@ -54,6 +54,7 @@ class CrawlingAdapter (var items : ArrayList<CrawlingItem>) : RecyclerView.Adapt
 //                }.run { itemView.imagebtn.context.startActivity(this) }
                 val intent = Intent(itemView.imagebtn.context, ImageViewActivity::class.java)
                 intent.putExtra("data", item.image)
+                intent.putExtra("data2", item.title)
                 startActivity(itemView.imagebtn.context, intent, null)
             }
         }
