@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import dev.pinkroom.sample.walletconnectkit.R
 import dev.pinkroom.walletconnectkit.WalletConnectKit
 import dev.pinkroom.walletconnectkit.WalletConnectKitConfig
+
 import kotlinx.android.synthetic.main.activity_nft.*
 
 class NFTActivity : AppCompatActivity() {
