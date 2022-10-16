@@ -8,6 +8,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.BrandFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.EnterpriseFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.HomeFragment
 import dev.pinkroom.sample.walletconnectkit.LOGIN.JoinActivity
@@ -127,7 +128,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
                         fragmentTransaction.commit()
                     }
-                    1 -> {}
+                    //브랜드소개
+                    1 -> {
+                        val fragment = BrandFragment()
+                        val fragmentTransaction = supportFragmentManager.beginTransaction()
+                        fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
+                        fragmentTransaction.commit()
+                    }
                     2 -> {}
                     3 -> {}
                 }
