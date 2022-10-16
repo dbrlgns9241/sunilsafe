@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.27037037037037037" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_brand.xml" value="0.21994535519125682" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_crawling.xml" value="0.22" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_enterprise.xml" value="0.21994535519125682" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_imageview.xml" value="0.26222826086956524" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_join.xml" value="0.20594262295081966" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_login.xml" value="0.2" />
@@ -15,7 +17,7 @@
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/crawling_item.xml" value="0.26222826086956524" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_brand.xml" value="0.23125" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_ceo.xml" value="0.2042417199302731" />
-        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_eaglesafe.xml" value="0.22203947368421054" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_eaglesafe.xml" value="0.1" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_enterprise.xml" value="0.2042417199302731" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_home.xml" value="0.2042417199302731" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_lucell.xml" value="0.23125" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRAGMENT.EnterpriseFragment">
+    tools:context=".FRAGMENT.MAINFRAGMENT.EnterpriseFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,12 +12,12 @@
         android:orientation="vertical">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tablayout"
+            android:id="@+id/brand_tablayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/pager"
+            android:id="@+id/brand_pager"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 

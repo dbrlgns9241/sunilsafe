@@ -8,11 +8,11 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.BrandFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.EnterpriseFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.HomeFragment
 import dev.pinkroom.sample.walletconnectkit.LOGIN.JoinActivity
 import dev.pinkroom.sample.walletconnectkit.LOGIN.LoginActivity
+import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.BrandActivity
+import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.EnterpriseActivity
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -91,11 +91,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 0 -> {
                     val fragment = HomeFragment()
                     val fragmentTransaction = supportFragmentManager.beginTransaction()
-                    fragmentTransaction.replace(
-                        dev.pinkroom.sample.walletconnectkit.R.id.frame_layout,
-                        fragment,
-                        "Home"
-                    )
+                    fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
                     fragmentTransaction.commit()
                 }
             }
@@ -123,17 +119,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 2 -> when (childPosition ){
                     //기업소개
                     0 -> {
-                        val fragment = EnterpriseFragment()
-                        val fragmentTransaction = supportFragmentManager.beginTransaction()
-                        fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
-                        fragmentTransaction.commit()
+//                        val fragment = EnterpriseFragment()
+//                        val fragmentTransaction = supportFragmentManager.beginTransaction()
+//                        fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
+//                        fragmentTransaction.commit()
+                        val intent = Intent(this, EnterpriseActivity::class.java)
+                        startActivity(intent)
                     }
                     //브랜드소개
                     1 -> {
-                        val fragment = BrandFragment()
-                        val fragmentTransaction = supportFragmentManager.beginTransaction()
-                        fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
-                        fragmentTransaction.commit()
+                        val intent = Intent(this, BrandActivity::class.java)
+                        startActivity(intent)
                     }
                     2 -> {}
                     3 -> {}

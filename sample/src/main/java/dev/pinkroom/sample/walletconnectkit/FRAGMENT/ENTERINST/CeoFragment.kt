@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.EnterpriseFragment
 import dev.pinkroom.sample.walletconnectkit.R
 
 

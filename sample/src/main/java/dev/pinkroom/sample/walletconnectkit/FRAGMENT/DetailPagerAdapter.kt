@@ -26,4 +26,5 @@ class DetailPagerAdapter(manager: FragmentManager): FragmentPagerAdapter(manager
         fragmentList.add(fragment)
         titleList.add(title)
     }
+
 }
