@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val parentList = mutableListOf("홈으로","로그인","회사소개", "제품소개", "테크놀러지","홍보센터","고객지원","NFT 갤러리")
         val childList = mutableListOf(
             mutableListOf(),
-            mutableListOf("회원가입","로그인", "마이페이지", "장바구니"),
+            mutableListOf("회원가입","로그인"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
             mutableListOf("나만의 금고찾기", "가정용 인테리어 금고","사무용 내화 금고","내화 방도 겸용 금고","특수금고"),
             mutableListOf("KT GIGA EYES 금고 CAM", "IOT금고","인증기술","잠금장치","화재보호","안전기술","내화테스트","방도테스트") ,
