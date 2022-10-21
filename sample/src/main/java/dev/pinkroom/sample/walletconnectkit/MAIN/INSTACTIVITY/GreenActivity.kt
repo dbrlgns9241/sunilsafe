@@ -5,27 +5,25 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.BRANDINST.EaglesafeFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.BRANDINST.LucellFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.DetailPagerAdapter
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.GREEN.NoksaekFragment
 import dev.pinkroom.sample.walletconnectkit.R
-import kotlinx.android.synthetic.main.activity_brand.*
+import kotlinx.android.synthetic.main.activity_green.*
 
-class BrandActivity : AppCompatActivity() {
+class GreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(dev.pinkroom.sample.walletconnectkit.R.layout.activity_brand)
+        setContentView(dev.pinkroom.sample.walletconnectkit.R.layout.activity_green)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
         setSupportActionBar(toolbar) // 툴바 적용
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         getSupportActionBar()?.setTitle("")
 
-        var viewPagers: ViewPager = brand_pager
-        var tabLayouts: TabLayout = brand_tablayout
+        var viewPagers: ViewPager = green_pager
+        var tabLayouts: TabLayout = green_tablayout
         var adapter = DetailPagerAdapter(getSupportFragmentManager())
-        adapter.addFragment(LucellFragment(), "루셀")
-        adapter.addFragment(EaglesafeFragment(), "이글세이프")
+        adapter.addFragment(NoksaekFragment(), "녹색경영")
 
         viewPagers!!.adapter = adapter
         tabLayouts!!.setupWithViewPager(viewPagers)
