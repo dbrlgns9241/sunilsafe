@@ -47,7 +47,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.add(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
         fragmentTransaction.commit()
-
+        
+        // expandableList 실행
         setExpandableList()
     }
 
@@ -71,9 +72,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     /* ExpandableListView 설정 */
     private fun setExpandableList() {
-        val parentList = mutableListOf("홈으로","로그인","회사소개", "제품소개", "테크놀러지","NFT 갤러리")
+        val parentList = mutableListOf("로그인","회사소개", "제품소개", "테크놀러지","NFT 갤러리")
         val childList = mutableListOf(
-            mutableListOf(),
             mutableListOf("회원가입","로그인"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
             mutableListOf("나만의 금고찾기", "가정용 인테리어 금고","사무용 내화 금고","내화 방도 겸용 금고","특수금고"),
@@ -84,26 +84,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val expandableAdapter = ExpandableListAdapter(this, parentList, childList)
         el_menu.setAdapter(expandableAdapter)
 
+        /* parent 클릭 이벤트 설정 */
         el_menu.setOnGroupClickListener { parent, v, groupPosition, id ->
-            /* todo : parent 클릭 이벤트 설정 */
             when (groupPosition) {
-                //홈으로
-                0 -> {
-                    val fragment = HomeFragment()
-                    val fragmentTransaction = supportFragmentManager.beginTransaction()
-                    fragmentTransaction.replace(dev.pinkroom.sample.walletconnectkit.R.id.frame_layout, fragment, "Home")
-                    fragmentTransaction.commit()
-                }
+                //로그인
+                0 -> {}
             }
             false
         }
+        /* child 클릭 이벤트 설정 */
         el_menu.setOnChildClickListener { parent, v, groupPosition, childPosition, id ->
-            /* todo : child 클릭 이벤트 설정 */
             when (groupPosition) {
-                //홈으로
-                0 -> {}
                 //로그인
-                1 -> when(childPosition){
+                0-> when(childPosition){
                     //회원가입
                     0 -> {
                         val intent = Intent(this, JoinActivity::class.java)
@@ -116,7 +109,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     }
                 }
                 //회사소개
-                2 -> when (childPosition ){
+                1 -> when (childPosition ){
                     //기업소개
                     0 -> {
                         val intent = Intent(this, EnterpriseActivity::class.java)
@@ -136,10 +129,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     3 -> {val intent = Intent(this, InjaeActivity::class.java)
                         startActivity(intent)}
                 }
+                2 -> {}
                 3 -> {}
-                4 -> {}
                 //NFT 갤러리
-                5 -> when (childPosition) {
+                4 -> when (childPosition) {
                     //나의 NFT 갤러리 가기
                     0 -> {
                         val intent = Intent(this, NFTActivity::class.java)

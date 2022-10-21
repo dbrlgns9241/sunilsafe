@@ -5,10 +5,10 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.ENTERINST.CeoFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.ENTERINST.OnwayFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.ENTERINST.VisionFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.ENTERINST.YearFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.ENTERINST.CeoFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.ENTERINST.OnwayFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.ENTERINST.VisionFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.ENTERINST.YearFragment
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.DetailPagerAdapter
 import dev.pinkroom.sample.walletconnectkit.R
 import kotlinx.android.synthetic.main.fragment_enterprise.*

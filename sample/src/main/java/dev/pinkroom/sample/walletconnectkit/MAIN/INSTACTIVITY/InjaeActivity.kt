@@ -6,8 +6,8 @@ import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.DetailPagerAdapter
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INJAE.IbsajiwonFragment
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INJAE.InjaesangFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.INJAE.IbsajiwonFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.INJAE.InjaesangFragment
 import dev.pinkroom.sample.walletconnectkit.R
 import kotlinx.android.synthetic.main.activity_injae.*
 
