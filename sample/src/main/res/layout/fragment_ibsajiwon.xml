@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRAGMENT.GREEN.NoksaekFragment">
+    tools:context=".FRAGMENT.INJAE.IbsajiwonFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -12,8 +12,9 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/noksaek"
+            android:src="@drawable/ibsajiwon"
             android:layout_marginTop="0dp"/>
     </ScrollView>
+
 
 </FrameLayout>

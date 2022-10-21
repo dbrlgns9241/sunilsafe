@@ -14,6 +14,7 @@ import dev.pinkroom.sample.walletconnectkit.LOGIN.LoginActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.BrandActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.EnterpriseActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.GreenActivity
+import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.InjaeActivity
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -132,7 +133,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         startActivity(intent)
                     }
                     //인재채용
-                    3 -> {}
+                    3 -> {val intent = Intent(this, InjaeActivity::class.java)
+                        startActivity(intent)}
                 }
                 3 -> {}
                 4 -> {}

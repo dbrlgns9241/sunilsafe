@@ -30,6 +30,12 @@
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass" />
         <activity
+            android:name=".MAIN.INSTACTIVITY.InjaeActivity"
+            android:exported="true"
+            android:parentActivityName=".MAIN.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            tools:ignore="DuplicateActivity,MissingClass" />
+        <activity
             android:name=".MAIN.INSTACTIVITY.GreenActivity"
             android:exported="true"
             android:parentActivityName=".MAIN.MainActivity"
