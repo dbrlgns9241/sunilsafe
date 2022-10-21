@@ -70,15 +70,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     /* ExpandableListView 설정 */
     private fun setExpandableList() {
-        val parentList = mutableListOf("홈으로","로그인","회사소개", "제품소개", "테크놀러지","홍보센터","고객지원","NFT 갤러리")
+        val parentList = mutableListOf("홈으로","로그인","회사소개", "제품소개", "테크놀러지","NFT 갤러리")
         val childList = mutableListOf(
             mutableListOf(),
             mutableListOf("회원가입","로그인"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
             mutableListOf("나만의 금고찾기", "가정용 인테리어 금고","사무용 내화 금고","내화 방도 겸용 금고","특수금고"),
             mutableListOf("KT GIGA EYES 금고 CAM", "IOT금고","인증기술","잠금장치","화재보호","안전기술","내화테스트","방도테스트") ,
-            mutableListOf("뉴스&공지사항","보도자료","이벤트","홍보, 동영상"),
-            mutableListOf("고객지원","자주 묻는 질문(A.S안내)","제품 설명서","우리지역 판매점"),
             mutableListOf("나의 NFT 갤러리 가기")
         )
 
@@ -138,10 +136,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 }
                 3 -> {}
                 4 -> {}
-                5 -> {}
-                6 -> {}
                 //NFT 갤러리
-                7 -> when (childPosition) {
+                5 -> when (childPosition) {
                     //나의 NFT 갤러리 가기
                     0 -> {
                         val intent = Intent(this, NFTActivity::class.java)
