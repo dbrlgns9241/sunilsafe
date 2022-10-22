@@ -15,6 +15,7 @@ import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.BrandActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.EnterpriseActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.GreenActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.InjaeActivity
+import dev.pinkroom.sample.walletconnectkit.MAIN.TECHACTIVITY.*
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -126,11 +127,56 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         startActivity(intent)
                     }
                     //인재채용
-                    3 -> {val intent = Intent(this, InjaeActivity::class.java)
-                        startActivity(intent)}
+                    3 -> {
+                        val intent = Intent(this, InjaeActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
+                //제품소개
                 2 -> {}
-                3 -> {}
+                //테크놀러지
+                3 -> when(childPosition){
+                    //KT GIGA EYES 금고 cam
+                    0 -> {
+                        val intent = Intent(this, KtActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //IOT 금고
+                    1 -> {
+                        val intent = Intent(this, IotActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //인증기술
+                    2 -> {
+                        val intent = Intent(this, CertiActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //잠금장치
+                    3 -> {
+                        val intent = Intent(this, LockActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //화재보호
+                    4 -> {
+                        val intent = Intent(this, FireActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //안전기술
+                    5 -> {
+                        val intent = Intent(this, SafetechActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //내화테스트
+                    6 -> {
+                        val intent = Intent(this, NaehwaActivity::class.java)
+                        startActivity(intent)
+                    }
+                    //방도테스트
+                    7 -> {
+                        val intent = Intent(this, BangdoActivity::class.java)
+                        startActivity(intent)
+                    }
+                }
                 //NFT 갤러리
                 4 -> when (childPosition) {
                     //나의 NFT 갤러리 가기
