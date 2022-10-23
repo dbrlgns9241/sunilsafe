@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRAGMENT.INST.BRANDINST.LucellFragment">
+    tools:context=".FRAGMENT.INSTFRAGMENT.BRANDINST.LucellFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView

@@ -6,7 +6,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import dev.pinkroom.sample.walletconnectkit.FRAGMENT.DetailPagerAdapter
-import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INST.GREEN.NoksaekFragment
+import dev.pinkroom.sample.walletconnectkit.FRAGMENT.INSTFRAGMENT.GREEN.NoksaekFragment
 import dev.pinkroom.sample.walletconnectkit.R
 import kotlinx.android.synthetic.main.activity_green.*
 

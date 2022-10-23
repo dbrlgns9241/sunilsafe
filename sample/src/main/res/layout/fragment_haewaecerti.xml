@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRAGMENT.INSTFRAGMENT.ENTERINST.YearFragment">
+    tools:context=".FRAGMENT.TECHFRAGMENT.CERTI.HaewaecertiFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -11,8 +11,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/year"
-            android:layout_marginTop="0dp"/>
+            android:src="@drawable/haewaecerti" />
     </ScrollView>
 
 </FrameLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FRAGMENT.INST.INJAE.IbsajiwonFragment">
+    tools:context=".FRAGMENT.INSTFRAGMENT.INJAE.IbsajiwonFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
