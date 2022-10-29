@@ -70,20 +70,33 @@ class CrawlingActivity : AppCompatActivity() {
                 var doc = connection.get()
                 //Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
-                val elements : Elements = doc.select("div.sc-45b283d7-0 div div span img")
+                val elements : Elements = doc.select("article.sc-82fdd4b8-6 a")
 
-                //Log.d("Tssssss", elements.toString())
+
+                Log.d("Tssssss", elements.toString())
                 // (여러개의) elements 처리
                 for (e in elements) {
-                    var title = e.absUrl("alt")
-                    var image = e.absUrl("src")
-                    title = title.replace("https://opensea.io/", "")
+                    var etherURL = e.absUrl("href")
+
+                    var connection = Jsoup.connect(etherURL)
+                    connection.userAgent("Chrome/105.0")
+                    var doc = connection.get()
+                    //Log.d("Tssssss", doc.toString())
+                    // HTML 파싱해서 데이터 추출하기
+                    val elementName : String = doc.select("section.item--header div h1").attr("title")//title
+                    val elementImage : String = doc.select("div.sc-45b283d7-0 div div img").attr("src")//src
+                    val ether : String = doc.select("div.TradeStation--main div div div").toString()
+
+                    var title = elementName
+                    var image = elementImage
+//                    title = title.replace("https://opensea.io/", "")
 
                     if (image.contains("https")) {
-                        var item = CrawlingItem(title, image)
+                        var item = CrawlingItem(title, image, ether)
                         itemList.add(item)
                         Log.d("TAAAAB", title.toString())
                         Log.d("TAAAB", image.toString())
+                        Log.d("TAAABbbb", ether.toString())
                     }
                 }
 

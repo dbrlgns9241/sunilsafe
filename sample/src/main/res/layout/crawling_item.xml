@@ -20,6 +20,13 @@
             android:text="title"
             android:textSize="30dp" />
 
+        <TextView
+            android:id="@+id/ether"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="title"
+            android:textSize="30dp" />
+
     </LinearLayout>
 
 </LinearLayout>

@@ -42,6 +42,7 @@ class CrawlingAdapter (var items : ArrayList<CrawlingItem>) : RecyclerView.Adapt
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         fun setItem(item : CrawlingItem) {
             itemView.title.text = item.title
+            itemView.ether.text = item.ether
             // 이미지 url 읽어서 넣기
             Glide.with(itemView)
                 .load(item.image)
@@ -55,6 +56,7 @@ class CrawlingAdapter (var items : ArrayList<CrawlingItem>) : RecyclerView.Adapt
                 val intent = Intent(itemView.imagebtn.context, ImageViewActivity::class.java)
                 intent.putExtra("data", item.image)
                 intent.putExtra("data2", item.title)
+                intent.putExtra("data3", item.ether)
                 startActivity(itemView.imagebtn.context, intent, null)
             }
         }
