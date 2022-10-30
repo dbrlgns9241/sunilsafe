@@ -71,22 +71,30 @@ class CrawlingActivity : AppCompatActivity() {
                 //Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
                 val elements : Elements = doc.select("article.sc-82fdd4b8-6 a")
+//                val elements2 : Elements = doc.select("div.sc-f0b2142c-0 span img")
 
-
-                Log.d("Tssssss", elements.toString())
+//                Log.d("Tssssss", elements.toString())
                 // (여러개의) elements 처리
                 for (e in elements) {
+                    Log.d("Tssssss", e.toString())
                     var etherURL = e.absUrl("href")
 
-                    var connection = Jsoup.connect(etherURL)
-                    connection.userAgent("Chrome/105.0")
-                    var doc = connection.get()
+//                    var connection = Jsoup.connect(etherURL)
+//                    connection.userAgent("Chrome/105.0")
+//                    var doc = connection.get()
                     //Log.d("Tssssss", doc.toString())
                     // HTML 파싱해서 데이터 추출하기
-                    val elementName : String = doc.select("section.item--header div h1").attr("title")//title
-                    val elementImage : String = doc.select("div.sc-45b283d7-0 div div img").attr("src")//src
-                    val ether : String = doc.select("div.TradeStation--main div div div").toString()
+                    val elementName= e.select("div.sc-f087f95e-0 span img").attr("alt")
+                    val elementImage = e.select("div.sc-f087f95e-0 span img").attr("srcset")
+//                    Log.d("Taaaab", elementName.toString())
+//                    Log.d("Taaaac", elementImage.toString())
+//                        doc.select("div.sc-45b283d7-0 div div span img").attr("src")//src
+                    var ether1 = etherURL.split("/assets/")
+                    var ether2 = ether1[1].split("/0x")
+                    var ether = ether2[0]
+//                    Log.d("Taaaad", ether.toString())
 
+//                    val ether : String = doc.select("div.TradeStation--price-container div div").toString()
                     var title = elementName
                     var image = elementImage
 //                    title = title.replace("https://opensea.io/", "")
