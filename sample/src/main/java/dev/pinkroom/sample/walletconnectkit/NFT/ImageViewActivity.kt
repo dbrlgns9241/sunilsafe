@@ -22,6 +22,7 @@ import java.nio.file.Files.createFile
 class ImageViewActivity : AppCompatActivity(){
     lateinit var data : String
     lateinit var data2 : String
+    lateinit var data3 : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,9 @@ class ImageViewActivity : AppCompatActivity(){
 
         //현재 이미지의 이름 string
         data2 = intent.getStringExtra("data2").toString()
+        
+        // 현재 NFT 의 코인정보
+        data3 = intent.getStringExtra("data3").toString()
         
         //img url 로 imageview에 보여주기
         Glide.with(this).load(data).into(imageView)
@@ -54,9 +58,11 @@ class ImageViewActivity : AppCompatActivity(){
             val database = Firebase.database
             val nameRef = database.getReference("name")
             val urlRef = database.getReference("url")
+            val coinRef = database.getReference("coin")
             //realtime db에 이름, 이미지url 전송
             nameRef.setValue(data2)
             urlRef.setValue(data)
+            coinRef.setValue(data3)
             Toast.makeText(this, "클라우드로 전송완료", Toast.LENGTH_SHORT).show()
         }
 
