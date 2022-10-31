@@ -15,6 +15,7 @@ import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.BrandActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.EnterpriseActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.GreenActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.INSTACTIVITY.InjaeActivity
+import dev.pinkroom.sample.walletconnectkit.MAIN.SAFEACTIVITY.SafeActivity
 import dev.pinkroom.sample.walletconnectkit.MAIN.TECHACTIVITY.*
 import dev.pinkroom.sample.walletconnectkit.NFT.NFTActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -77,7 +78,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val childList = mutableListOf(
             mutableListOf("회원가입","로그인"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
-            mutableListOf("나만의 금고찾기", "가정용 인테리어 금고","사무용 내화 금고","내화 방도 겸용 금고","특수금고"),
+            mutableListOf(),
             mutableListOf("KT GIGA EYES 금고 CAM", "IOT금고","인증기술","잠금장치","화재보호","안전기술","내화테스트","방도테스트") ,
             mutableListOf("나의 NFT 갤러리 가기")
         )
@@ -88,8 +89,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         /* parent 클릭 이벤트 설정 */
         el_menu.setOnGroupClickListener { parent, v, groupPosition, id ->
             when (groupPosition) {
-                //로그인
-                0 -> {}
+                //제품소개
+                2 -> {
+                    val intent = Intent(this, SafeActivity::class.java)
+                    startActivity(intent)
+                }
             }
             false
         }

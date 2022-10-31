@@ -21,6 +21,7 @@
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_naehwa.xml" value="0.10434911681757458" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_nft.xml" value="0.25" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_safe.xml" value="0.23125" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_safetech.xml" value="0.17188264058679706" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/activity_splash.xml" value="0.20594262295081966" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/appbar.xml" value="0.22" />
@@ -34,13 +35,17 @@
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_ibsajiwon.xml" value="0.21994535519125682" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_info.xml" value="0.21994535519125682" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_injaesang.xml" value="0.21994535519125682" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_interior.xml" value="0.22203947368421054" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_iotlg.xml" value="0.1" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_iotskt.xml" value="0.16160919540229884" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_kt.xml" value="0.23125" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_kuknaecerti.xml" value="0.20347322720694647" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_lucell.xml" value="0.23125" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_naehwa.xml" value="0.23125" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_noksaek.xml" value="0.21994535519125682" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_onway.xml" value="0.17311007141098253" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_samu.xml" value="0.23125" />
+        <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_special.xml" value="0.23125" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_vision.xml" value="0.21789617486338797" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_yakgwan.xml" value="0.1" />
         <entry key="..\:/Users/dorns/AndroidStudioProjects/sunilsafe/sample/src/main/res/layout/fragment_year.xml" value="0.17311007141098253" />

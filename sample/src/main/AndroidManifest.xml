@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalletConnectKit"
         android:usesCleartextTraffic="true">
-        <!--SPLASHACTIVITY-->
+        <!-- SPLASHACTIVITY -->
         <activity
             android:name=".MAIN.SplashActivity"
             android:exported="true"
@@ -24,14 +24,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!--MAINACTIVITY-->
+        </activity> <!-- MAINACTIVITY -->
         <activity
             android:name=".MAIN.MainActivity"
             android:exported="true"
             android:windowSoftInputMode="stateHidden|adjustResize"
-            tools:ignore="DuplicateActivity,MissingClass" />
-        <!--TECHACTIVITY-->
+            tools:ignore="DuplicateActivity,MissingClass" /> <!-- TECHACTIVITY -->
         <activity
             android:name=".MAIN.TECHACTIVITY.BangdoActivity"
             android:exported="true"
@@ -79,8 +77,7 @@
             android:exported="true"
             android:parentActivityName=".MAIN.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
-            tools:ignore="DuplicateActivity,MissingClass" />
-        <!--INSTACTIVITY-->
+            tools:ignore="DuplicateActivity,MissingClass" /> <!-- INSTACTIVITY -->
         <activity
             android:name=".MAIN.INSTACTIVITY.InjaeActivity"
             android:exported="true"
@@ -105,7 +102,14 @@
             android:parentActivityName=".MAIN.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
             tools:ignore="DuplicateActivity,MissingClass" />
-        <!--LOGIN-->
+        <!-- SAFEACTIVITY -->
+        <activity
+            android:name=".MAIN.SAFEACTIVITY.SafeActivity"
+            android:exported="true"
+            android:parentActivityName=".MAIN.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            tools:ignore="DuplicateActivity,MissingClass"/>
+        <!-- LOGIN -->
         <activity
             android:name=".LOGIN.JoinActivity"
             android:exported="true"
@@ -117,8 +121,7 @@
             android:exported="true"
             android:parentActivityName=".MAIN.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustResize"
-            tools:ignore="DuplicateActivity,MissingClass" />
-        <!--NFT-->
+            tools:ignore="DuplicateActivity,MissingClass" /> <!-- NFT -->
         <activity
             android:name=".NFT.NFTActivity"
             android:exported="true"
