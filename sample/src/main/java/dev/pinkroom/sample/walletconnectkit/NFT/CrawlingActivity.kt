@@ -96,7 +96,8 @@ class CrawlingActivity : AppCompatActivity() {
 
 //                    val ether : String = doc.select("div.TradeStation--price-container div div").toString()
                     var title = elementName
-                    var image = elementImage
+                    var image1 = elementImage.split(" ")
+                    var image = image1[0]
 //                    title = title.replace("https://opensea.io/", "")
 
                     if (image.contains("https")) {
