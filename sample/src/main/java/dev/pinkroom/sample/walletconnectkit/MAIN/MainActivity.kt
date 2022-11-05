@@ -74,13 +74,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     /* ExpandableListView 설정 */
     private fun setExpandableList() {
-        val parentList = mutableListOf("로그인","회사소개", "제품소개", "테크놀러지","NFT 갤러리")
+        val parentList = mutableListOf("로그인","회사소개", "테크놀러지", "제품소개","NFT 갤러리")
         val childList = mutableListOf(
             mutableListOf("회원가입","로그인"),
             mutableListOf("기업소개","브랜드 소개", "그린 경영", "인재채용"),
+            mutableListOf("KT GIGA EYES 금고 CAM", "IOT금고","인증기술","잠금장치","화재보호","안전기술","내화테스트","방도테스트"),
             mutableListOf(),
-            mutableListOf("KT GIGA EYES 금고 CAM", "IOT금고","인증기술","잠금장치","화재보호","안전기술","내화테스트","방도테스트") ,
-            mutableListOf("나의 NFT 갤러리 가기")
+            mutableListOf()
         )
 
         val expandableAdapter = ExpandableListAdapter(this, parentList, childList)
@@ -90,8 +90,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         el_menu.setOnGroupClickListener { parent, v, groupPosition, id ->
             when (groupPosition) {
                 //제품소개
-                2 -> {
+                3 -> {
                     val intent = Intent(this, SafeActivity::class.java)
+                    startActivity(intent)
+                }
+                //NFT 갤러리
+                4 -> {
+                    val intent = Intent(this, NFTActivity::class.java)
                     startActivity(intent)
                 }
             }
@@ -136,10 +141,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         startActivity(intent)
                     }
                 }
-                //제품소개
-                2 -> {}
                 //테크놀러지
-                3 -> when(childPosition){
+                2 -> when(childPosition){
                     //KT GIGA EYES 금고 cam
                     0 -> {
                         val intent = Intent(this, KtActivity::class.java)
@@ -181,14 +184,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         startActivity(intent)
                     }
                 }
+                //제품소개
+                3 -> {}
                 //NFT 갤러리
-                4 -> when (childPosition) {
-                    //나의 NFT 갤러리 가기
-                    0 -> {
-                        val intent = Intent(this, NFTActivity::class.java)
-                        startActivity(intent)
-                    }
-                }
+                4 -> {}
             }
             false
         }

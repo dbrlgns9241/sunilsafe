@@ -34,13 +34,14 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header">
 
         <ExpandableListView
             android:id="@+id/el_menu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="200dp"
             android:groupIndicator="@null" />
 
     </com.google.android.material.navigation.NavigationView>

@@ -30,10 +30,11 @@ class ImageViewActivity : AppCompatActivity(){
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val imageView = findViewById<ImageView>(R.id.img_profile)
-        Log.d("Taaaa", "여기까진 됨")
+//        Log.d("Taaaa", "여기까진 됨")
 
         //현재 선택한 이미지 url
         data = intent.getStringExtra("data").toString()
+        Log.d("Taaaa", data)
 
         //현재 이미지의 이름 string
         data2 = intent.getStringExtra("data2").toString()

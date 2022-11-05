@@ -12,9 +12,13 @@
         android:layout_height="wrap_content"
         android:text="내 클라우드로 전송"
         app:layout_constraintRight_toRightOf="parent"
-        android:background="@color/pink"
-        android:visibility="gone"
-        tools:ignore="MissingConstraints" />
+        android:background = "@drawable/backgradientorange"
+        android:fontFamily="@font/nexonlight"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
 
     <ImageView
         android:id="@+id/img_profile"

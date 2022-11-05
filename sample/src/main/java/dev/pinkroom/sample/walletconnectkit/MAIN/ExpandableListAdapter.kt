@@ -36,6 +36,9 @@ class ExpandableListAdapter(
 
         parentView.tv_list_title.text = parents[parent]
 
+        setIcon(parent, parentView)
+        setArrow(parent, parentView, isExpanded)
+
         return parentView
     }
 
@@ -55,5 +58,25 @@ class ExpandableListAdapter(
         return childView
     }
 
+    /* drawer 아이콘 설정 */
+    private fun setIcon(parentPosition: Int, parentView: View) {
+        when (parentPosition) {
+            0 -> parentView.iv_img.setImageResource(R.drawable.ic_person_16)
+            1 -> parentView.iv_img.setImageResource(R.drawable.enterprise_7_16)
+            2 -> parentView.iv_img.setImageResource(R.drawable.quality_technology_16)
+            3 -> parentView.iv_img.setImageResource(R.drawable.safe_22_16)
+            4 -> parentView.iv_img.setImageResource(R.drawable.image_33_16)
+        }
+    }
+
+    /* 닫힘, 열림 표시해주는 화살표 설정 */
+    private fun setArrow(parentPosition: Int, parentView: View, isExpanded: Boolean) {
+
+        /* 3번째 4번째 부모는 자식이 없으므로 화살표 설정해주지 않음 */
+        if (parentPosition != 3 && parentPosition != 4) {
+            if (isExpanded) parentView.iv_arrow_drop.setImageResource(R.drawable.ic_arrow_drop_up_16)
+            else parentView.iv_arrow_drop.setImageResource(R.drawable.ic_arrow_drop_down_16)
+        }
+    }
 
 }

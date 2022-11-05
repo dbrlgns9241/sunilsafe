@@ -20,6 +20,9 @@
             android:id="@+id/emailArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexonlight"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:hint="이메일"
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
@@ -30,6 +33,9 @@
             android:id="@+id/pwdArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexonlight"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:hint="비밀번호"
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
@@ -39,6 +45,9 @@
             android:id="@+id/pwdCheckArea"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexonlight"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:hint="비밀번호 확인"
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
@@ -48,10 +57,14 @@
             android:id="@+id/join_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nexonlight"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:background="@color/gray"
+            android:background="@drawable/backgradientorange"
+            android:textColor="@color/white"
             android:text="회원가입" />
 
         <TextView
@@ -61,6 +74,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:text="이미 회원이신가요?"
+            android:fontFamily="@font/nexonlight"
             android:textSize="30sp"
             android:gravity="center"
             android:textStyle="bold"/>
@@ -72,7 +86,11 @@
             android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:background="@color/pink"
+            android:fontFamily="@font/nexonlight"
+            android:background="@drawable/backgradientdeeporange"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/white"
             android:text="로그인" />
 
 
