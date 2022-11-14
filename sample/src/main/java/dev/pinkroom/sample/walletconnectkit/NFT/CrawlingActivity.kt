@@ -70,7 +70,7 @@ class CrawlingActivity : AppCompatActivity() {
                 var doc = connection.get()
                 //Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
-                val elements : Elements = doc.select("article.sc-82fdd4b8-6 a")
+                val elements : Elements = doc.select("article.sc-a65846b6-6 a")
 //                val elements2 : Elements = doc.select("div.sc-f0b2142c-0 span img")
 
 //                Log.d("Tssssss", elements.toString())
@@ -108,6 +108,8 @@ class CrawlingActivity : AppCompatActivity() {
                         Log.d("TAAABbbb", ether.toString())
                     }
                 }
+
+
 
 
 //                run elemLoop@{
