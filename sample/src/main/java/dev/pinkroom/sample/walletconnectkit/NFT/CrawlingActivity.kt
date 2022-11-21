@@ -47,12 +47,14 @@ class CrawlingActivity : AppCompatActivity() {
         // MainActivity 로부터 addTxt 변수 전달 받아 etherCode로 저장
         var tmp = intent.getStringExtra("addTxt").toString()
         val etherCode = tmp.substring(16)
-        Toast.makeText(this@CrawlingActivity, "https://opensea.io/" + etherCode, Toast.LENGTH_SHORT)
-            .show()
 
         //크롤링 함수 실행
         doTask("https://opensea.io/" + etherCode)
-
+//        doTask("https://opensea.io/0x2DD5EdB5178B847bD85c2095bF861a2C3b42Bd82")
+        
+        //크롤링 완료 문구
+        Toast.makeText(this@CrawlingActivity, "https://opensea.io/" + etherCode, Toast.LENGTH_SHORT)
+            .show()
     }
 
     // 크롤링 하기
@@ -67,21 +69,21 @@ class CrawlingActivity : AppCompatActivity() {
                 var connection = Jsoup.connect(url)
                 connection.userAgent("Chrome/105.0")
                 var doc = connection.get()
-//                Log.d("Tssssss", doc.toString())
+                Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
-                val elements : Elements = doc.select("article.sc-a65846b6-6 a")
+                val elements : Elements = doc.select("article.sc-6f4a9ed3-6 a")
 //                val elements2 : Elements = doc.select("div.sc-f0b2142c-0 span img")
 
 //                Log.d("Tssssss", elements.toString())
                 // (여러개의) elements 처리
                 for (e in elements) {
-                    Log.d("Tssssss", e.toString())
+//                    Log.d("Tssssss", e.toString())
                     var etherURL = e.absUrl("href")
 
 //                    var connection = Jsoup.connect(etherURL)
 //                    connection.userAgent("Chrome/105.0")
 //                    var doc = connection.get()
-                    //Log.d("Tssssss", doc.toString())
+//                    Log.d("Tssssss", doc.toString())
                     // HTML 파싱해서 데이터 추출하기
                     val elementName= e.select("div.sc-f087f95e-0 span img").attr("alt")
                     val elementImage = e.select("div.sc-f087f95e-0 span img").attr("srcset")
