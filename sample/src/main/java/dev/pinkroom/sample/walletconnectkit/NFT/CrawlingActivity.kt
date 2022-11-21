@@ -53,7 +53,6 @@ class CrawlingActivity : AppCompatActivity() {
         //크롤링 함수 실행
         doTask("https://opensea.io/" + etherCode)
 
-
     }
 
     // 크롤링 하기
@@ -68,7 +67,7 @@ class CrawlingActivity : AppCompatActivity() {
                 var connection = Jsoup.connect(url)
                 connection.userAgent("Chrome/105.0")
                 var doc = connection.get()
-                //Log.d("Tssssss", doc.toString())
+//                Log.d("Tssssss", doc.toString())
                 // HTML 파싱해서 데이터 추출하기
                 val elements : Elements = doc.select("article.sc-a65846b6-6 a")
 //                val elements2 : Elements = doc.select("div.sc-f0b2142c-0 span img")
