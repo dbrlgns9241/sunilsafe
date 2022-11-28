@@ -13,3 +13,6 @@ https://github.com/pink-room/walletconnectkit-android
 <img src = "https://user-images.githubusercontent.com/108243290/204234812-6239b1f0-32f0-4237-a851-4de382e8d593.jpg" width="20%" height="20%" align="left">
 <img src = "https://user-images.githubusercontent.com/108243290/204234976-1f2fe2ad-4d31-4c32-8b1b-df2720dc31f4.jpg" width="20%" height="20%" align="left">
 <img src = "https://user-images.githubusercontent.com/108243290/204235034-aa9414fa-d55e-4c4f-a591-d5b8a1aad3f9.jpg" width="20%" height="20%" align="left">
+
+### 노션 링크
+https://hungry-airmail-4a0.notion.site/NFT-49d5111da7ec407e990151193624b8c2
