@@ -23,4 +23,8 @@ https://github.com/pink-room/walletconnectkit-android
 <hr/>
 
 ### 노션 링크
+개발 가이드 및 어플실행 방법,
+NFT 민팅 시 확인법, 라즈베리파이로 전송법 등 
+전체 어플 사용법을 알려주는 노션입니다.
+
 https://hungry-airmail-4a0.notion.site/NFT-49d5111da7ec407e990151193624b8c2
